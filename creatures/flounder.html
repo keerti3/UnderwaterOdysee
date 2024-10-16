@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .image-box {
+      width: 50%;
+      height: 50%;
+      overflow: hidden;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+ 
+    }
+
+    .fact-box {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+
+    .card {
+      background-color: #333;
+      border: 1px solid #555;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .card h2 {
+      color: #ffaa00;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .sun {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ffdb58 20%, #ffcc00 70%, #ffaa00 100%);
+      border-radius: 50%;
+      position: absolute;
+      top: -50px; /* Initial position from the top */
+      right: 50px; /* Initial position from the right */
+      animation: moveSun 10s linear infinite, spin 5s linear infinite, pulse 2s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      text-shadow: 0 0 10px #ffaa00, 0 0 20px #ffaa00, 0 0 30px #ffaa00;
+      box-shadow: 0 0 20px #ffaa00, 0 0 40px #ffaa00, 0 0 60px #ffaa00;
+    }
+
+    @keyframes moveSun {
+      0%, 100% {
+        top: -50px;
+        right: 50px;
+      }
+      50% {
+        top: 100vh; /* Move to the bottom */
+        right: 50px;
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../css/star-background.css">
+  <title>Flounder</title>
+</head>
+<body>
+    <div class="form-background"></div>
+  <div class="image-box">
+    <img src="../img/flounder_Removed.png" alt="Flounder">
+  </div>
+  <div class="fact-box">
+    <div class="card">
+      <h2>Flounder</h2>
+      <p>
+        Flounder are flatfish that live on the ocean floor, camouflaging themselves by blending into their sandy or muddy surroundings to ambush prey.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Interesting Facts</h2>
+      <ul>
+        <li>Flounders are born with eyes on both sides of their heads, but as they mature, one eye gradually migrates to the other side, giving them a unique asymmetrical appearance that helps them lie flat on the ocean floor.</li>
+        <li>Flounders can change their skin color and pattern to blend in with their surroundings, making them nearly invisible to predators and prey on the ocean floor.</li>
+        <li>Flounders are bottom-dwelling fish that spend most of their time lying on their side on the seabed, waiting to ambush prey like small fish and crustaceans.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Importance</h2>
+      <p>
+        Flounder play an important role in marine ecosystems as both predators of smaller marine life and prey for larger species, helping to maintain the balance of the food chain in their ocean habitats.
+      </p>
+    </div>
+  </div>
+
+  
+</body>
+</html>
